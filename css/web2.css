@@ -1,0 +1,134 @@
+/* 여기부터가 디테일작업 출제 유형에 따라 다른 부분 / 위는 공통클래스 모두 동일*/
+#hd {
+    background-color: #0c51a6;
+
+}
+
+/* 상단좌우여백 */
+#hd {
+    padding: 0 15px;
+}
+
+/* 로고 */
+#hd h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#hd h1 a {
+    color: white;
+}
+
+/* 대메뉴만 크게 */
+#gnb>li>a {
+    font-size: 20px;
+    padding: 10px 25px;
+    background-color: #0a3b78;
+    color: white;
+    display: block;
+    /*제일중요 높이 관련 스타일이 먹힌다.*/
+}
+
+/* 소메뉴 */
+#gnb ul {
+    background-color: white;
+    line-height: 2.5;
+    left: 0;
+    right: 0;
+    top: 100%;
+    text-indent: 15px;
+
+    /*소메뉴 애니메이션구현*/
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#gnb li:hover ul {
+    max-height: 120px;
+}
+
+/* 대메뉴활성화 및 소메뉴롤오버 */
+#gnb li:hover>a {
+    color: #0c51a6;
+    background-color: white;
+    font-weight: bold;
+}
+
+
+/* 공지와 갤러리 */
+.tab h2 {
+    line-height: 40px;
+}
+
+.tab ul {
+    left: 0;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    /*엄청중요 겹쳐있으므로*/
+
+    /* 자바스크립트 세팅하기 */
+    display: none;
+    padding: 15px;
+    box-sizing: border-box;
+    line-height: 2;
+}
+
+.tab h2 {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.tab .notice ul {
+    flex-direction: column;
+}
+
+/* 자바스크립트 세팅하기 */
+.tab .on h2 {
+    color: #0c51a6
+}
+
+.tab .on ul {
+    display: flex;
+}
+
+.gallery img {
+    margin: 0 5px;
+}
+
+/* 하단 */
+
+#fd li {
+    margin: 0 15px;
+    line-height: 2;
+}
+
+/* 팝업
+abs이므로 반드시 부모가 있어야함
+
+*/
+#popup {
+    background-color: white;
+    border: 1px solid #222;
+    text-align: center;
+    padding: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 자바스크립트연동준비 */
+    display: none;
+
+}
+
+
+/* 페이드 */
+#fadeswiper .swiper-slide{
+    left:0; top:0;
+    opacity: 0;
+    transition: 0.5s;
+}
+#fadeswiper .swiper-slide.on {
+    opacity: 1;
+}
